@@ -1,19 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title> BSU West Campus</title>
-</head>
-<body>
-    <img src="bsu.jpg" width="2200" height="1700" border="0" usemap="#map" />
+<img src="[bsu map comp 335] (imported)" width="2200" height="1700" border="0" usemap="#map" />
 
-    <map name="bsumapwest">
-    <!-- #$-:Image map file created by GIMP Image Map plug-in -->
-    <!-- #$-:GIMP Image Map plug-in by Maurits Rijk -->
-    <!-- #$-:Please do not edit lines starting with "#$" -->
-    <!-- #$VERSION:2.3 -->
-    <!-- #$AUTHOR:Marie Clancy -->
-    <area shape="poly" coords="166,672,193,640,239,660,244,684,217,704,170,700" alt="Hunt Hall" target="audio" href="hunthall.mp3" />
+<map name="map">
+<!-- #$-:Image map file created by GIMP Image Map plug-in -->
+<!-- #$-:GIMP Image Map plug-in by Maurits Rijk -->
+<!-- #$-:Please do not edit lines starting with "#$" -->
+<!-- #$VERSION:2.3 -->
+<!-- #$AUTHOR:Marie Clancy -->
+<area shape="poly" coords="166,672,193,640,239,660,244,684,217,704,170,700" alt="Hunt Hall" target="audio" href="hunthall.mp3" />
 <area shape="poly" coords="172,714,230,736,162,813,112,795,112,779,125,760" alt="Boyden Hall" target="audio" href="boydenhall.mp3" />
 <area shape="poly" coords="274,792,346,814,367,758,300,739,269,770" alt="Tillinghast Hall" target="audio" href="tillinghasthall.mp3" />
 <area shape="poly" coords="301,868,217,936,180,924,222,860,264,832" alt="Woodward Hall" target="audio" href="woodwardhall.mp3" />
@@ -24,6 +17,4 @@
 <area shape="poly" coords="528,759,538,791,579,792,597,779,681,803,705,790,701,756,637,735,635,696" alt="Mohler-Faria Science and Math Center" target="audio" href="DMF.mp3" />
 <area shape="poly" coords="121,841,196,870,220,828,142,810" alt="Harrington Hall" target="audio" href="harringtonhall.mp3" />
 <area shape="poly" coords="292,684,348,700,332,738,274,724" alt="Art Center" target="audio" href="artcenter.mp3" />
-    </map>
-</body>
-</html>
+</map>
