@@ -1,32 +1,70 @@
 <!--Marie Clancy 
 assignment1 due 10/4/19 -->
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport"
-  content="width=device-width, initial-scale=1.0"> 
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Marie Clancy</title>
-</head>
+<html>
 
+<head>
+<style>
+ /* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+/* Add some content at the bottom of the video/page */
+.content {
+  position: fixed;
+  bottom: 50%;
+  background: rgba(0, 0, 0, 0);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+.links{
+  position: fixed; 
+  bottom: 100;
+  background: rgba(0, 0, 0, 0);
+  color: #f1f1f1;
+  float: right;
+  width: 100%;
+  padding: 20px;
+
+}
+
+</style>
+
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+</head>
 <body>
-  <header class="v-header containter">
-    <div class=".video-fullscreen">
-      <video src="water.mp4" autoplay="true" 
-      loop="true"></video>
-    </div>
-    <div class="header-overlay"></div>
-    <div class="header-content">
-      <h1>Marie Clancy</h1>
-      <p>
-        Here's My Homepage 
-      </p>
-      <p><a href="#" class="btn">About Me</a></p>
-      <p><a href="#" class="btn">Resume</a></p>
-      <p><a href="#" class="btn">Hobbies</a></p>
-      <p><a href="#" class="btn">Work</a></p>
-    </div>
-  </header>
+
+ <!-- The video -->
+<video autoplay muted loop id="myVideo">
+  <source src="water.mp4" type="video/mp4">
+</video>
+
+<!-- Optional: some overlay text to describe the video -->
+<div class="content" id="center_div">
+  <h1>Marie Clancy</h1>
+  <h2>This is my homepage</h2>
+</div>
+
+<div class="links" id="topright_div">
+  <p style='font-size:20px'><i class='fas fa-user-circle' style='font-size:20px'></i> About me</p>
+  <p style='font-size:20px'><i class='fas fa-file' style='font-size:20px'></i> Resume</p>
+  <p style='font-size:20px'><i class='fas fa-palette' style='font-size:20px'></i> Hobbies</p>
+  <p style='font-size:20px'><i class='fas fa-archive' style='font-size:20px'></i> Work</p>
+</div>
+
+
 </body>
-</html>
+ 
+<html>
+
+
+
