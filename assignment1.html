@@ -1,11 +1,11 @@
-// Marie Clancy 
-// assignment1 due 10/4/19 
+<!--Marie Clancy 
+assignment1 due 10/4/19 -->
 <!DOCTYPE html>
 <html>
   <body>
     <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
     <iframe width="560" height= "315"
-    src="https://www.youtube.com/embed/2bW68nM0gk8?controls=0" frameborder="0"
+    src="https://www.youtube.com/watch?v=2bW68nM0gk8" frameborder="0"
     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
     allowfullscreen></iframe>>
 
@@ -13,7 +13,7 @@
       // 2. This code loads the IFrame Player API code asynchronously.
       var tag = document.createElement('script');
 
-      tag.src = "https://youtu.be/2bW68nM0gk8";
+      tag.src = "https://www.youtube.com/watch?v=2bW68nM0gk8";
       var firstScriptTag = document.getElementsByTagName('script')[0];
       firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
@@ -24,7 +24,7 @@
         player = new YT.Player('player', {
           height: '390',
           width: '640',
-          videoId: 'M7lc1UVf-VE',
+          videoId: '2bW68nM0gk8',
           events: {
             'onReady': onPlayerReady,
             'onStateChange': onPlayerStateChange
