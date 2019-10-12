@@ -1,4 +1,5 @@
-
+<!-- Marie Clancy. 
+Practice exam 10.10.19-->
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,11 +30,12 @@
           "Wednesday": 3,"Thursday": 4,"Friday": 5,"Saturday":6
         }[dayname];
       }
-      // To Do: Validate year - check 4 digits
-
-
-
-
+      // Validate year - check 4 digits
+      $("#year").change(function() {
+        if ($("#year").val().search(/^\d{4}$/) == -1) {
+          $("#error").html("The <strong>year</strong> you entered is not in the correct form");
+        }
+      });
       // Validate month (Jan ~ Dec)
       $("#month").change(function() {
         var months = {"Jan":1, "Feb":2, "Mar":3, "Apr":4, "May":5, "Jun":6, "Jul":7, "Aug":8,"Sep":9,"Oct":10,"Nov":11,"Dec":12};
@@ -41,11 +43,12 @@
           $("#error").html("The <strong>month</strong> you entered is not in the correct form");
         }
       });
-      // To Do: Validate max days: Days of the month (between 28 and 31)
-
-
-
-
+      // Validate max days: Days of the month (between 28 and 31)
+      $("#maxdays").change(function() {
+        if ($("#maxdays").val()<28 || $("#maxdays").val()>31) {
+          $("#error").html("The <strong>days</strong> you entered is not in the correct form");
+        }
+      });
       // Validate First day of the week: Sunday ~ Saturday
       $("#firstday").change(function() {
         if (!( daytoint($("#firstday").val())>=0 && daytoint($("#firstday").val())<=6) )
@@ -67,16 +70,36 @@
         /* this will allow div tag to move to next line */
         $("#calendar").append("<div class=\"end\"></div>");
 
-        // To Do: 
+        var row, counter, day=1;
         // depending on the day that user types, we may need to print less than 7 days
+        // if user types Wed, then counter will hold 3
+        counter = daytoint($("#firstday").val());
+
         // if user types Wed, then pint &nbsp; for Sun, Mon, Tue
+        for (row = 0 ; row < counter; row++)
+          $("#calendar").append("<div> &nbsp;</div>");
+
+        // if user types Wed, then counter is 3. Print 1~4 for Wed, Thu, Fri, Sat
+        for (row = counter ; row < 7; row++)
+          $("#calendar").append("<div>" + day++  + " </div>");
+        //
+        $("#calendar").append("<div class=\"end\"></div>");
 
         // You will need to use % (Modulo - remainder) operator to print days to next line
         // You will need to use loop (for, while, do while, do until, etc) to print up to max days.
         // I found that do while loop is easier than others, but it is up to you
         // We will print whatever user types max days (31, 30, 29, 28)
         // You can use inline style CSS to print red color for Sundays
+        row = 1
+        do{
+          if (row % 7 == 1)
+            $("#calendar").append("<div style=\"color:red;\">" + (day++) + "</div>");
+          else
+            $("#calendar").append("<div>" + (day++) + "</div>");
 
+          if (row++ % 7 == 0)
+            $("#calendar").append("<div class=\"end\"></div>");
+        } while (day <= $("#maxdays").val())
 
       }); // submit click
     });
@@ -85,7 +108,7 @@
 <body>
   <h1> Exam: Display Calendar for one month</h1>
   <form>
-    <input type = "text"  id = "year" value="2019" placeholder="e.g., 2017">
+    <input type = "text"  id = "year" value="2019" placeholder="e.g., 2019">
       &nbsp; What Year is this calendar for?<br>
     <input type = "text"  id = "month"  value="Oct" placeholder="e.g., Oct ">
       &nbsp; What Month is this calendar for?<br>
